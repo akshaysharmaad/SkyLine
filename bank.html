@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+    <title>Bank</title>
+</head>
+<body>
+    
+    <form class="form gorm-group">
+        <label>Enter Position</label><input type="text" placeholder="Enter the Position of Customer" class="form-control" id="qpos"><br>
+        <label>Enter UID</label><input type="text" placeholder="Enter Unique ID " class="form-control" id="uid"><br>
+        <button type="submit" id="query">Submit</button>
+    </form>
+
+    <script src="https://www.gstatic.com/firebasejs/6.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.5.0/firebase-firestore.js"></script>
+    <script src="firestore.js"></script>
+</body>
+</html>
