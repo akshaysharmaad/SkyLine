@@ -15,7 +15,22 @@ firebase.initializeApp(firebaseConfig);
 var db = firebase.firestore();
 const increment = firebase.firestore.FieldValue.increment(1);
 
-document.addEventListener("click",register);
+document.addEventListener('submit', query);
+
+document.addEventListener('submit',register);
+
+function query(e) {
+    e.preventDefault();
+    db.collection("Individual Position").where("Position", "==", `${document.getElementById('qpos').value}`).get().
+        then(function (querySnapshot) {
+            querySnapshot.forEach(function (doc) {
+                console.log(doc.data().UID);
+            });
+        }).catch(function (error) {
+            console.log("Error getting documents: ", error);
+        }
+        )
+}
 
 function register(e) {
     e.preventDefault();
@@ -83,7 +98,7 @@ function DisplayQ(){
 }
 
 function live() {
-    db.collection("Individual Position").get().then((querySnapshot) => {
+    db.collection("Individual Position").orderBy('Time').get().then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
             
            var str = `<tr>
@@ -97,16 +112,3 @@ function live() {
     });
 }
 
-document.addEventListener("submit",query);
-function query(e) {
-    e.preventDefault();
-    db.collection("Individual Position").where("Position","==",`${document.getElementById('qpos').value}`).get().
-    then(function(querySnapshot){
-        querySnapshot.forEach(function (doc) {
-            console.log(doc.data().UID);
-        });
-    }).catch(function (error) {
-        console.log("Error getting documents: ", error);
-    }
-        )
-}

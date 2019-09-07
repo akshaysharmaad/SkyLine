@@ -10,12 +10,11 @@
 </head>
 <body>
     
-    <form class="form gorm-group">
-        <label>Enter Position</label><input type="text" placeholder="Enter the Position of Customer" class="form-control" id="qpos"><br>
-        <label>Enter UID</label><input type="text" placeholder="Enter Unique ID " class="form-control" id="uid"><br>
-        <button type="submit" id="query">Submit</button>
+    <form class="form gorm-group" id="bank_form">
+        <label>Enter Position</label><input type="text" placeholder="Enter the Position of Customer" class="form-control" id="qpos" required><br>
+        <label>Enter UID</label><input type="text" placeholder="Enter Unique ID " class="form-control" id="uid" required><br>
+        <button type="submit">Submit</button>
     </form>
-
     <script src="https://www.gstatic.com/firebasejs/6.5.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.5.0/firebase-firestore.js"></script>
     <script src="firestore.js"></script>
