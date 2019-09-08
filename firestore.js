@@ -17,10 +17,18 @@ const increment = firebase.firestore.FieldValue.increment(1);
 
 function query(e) {
     e.preventDefault();
-    db.collection("Individual Position").get().
+    find = Number(find)
+    db.collection("Individual Position").where("Position","==",find).get().
         then(function (querySnapshot) {
             querySnapshot.forEach(function(doc) {
                 console.log(doc.data().UID);
+                if (doc.data().UID==`${document.getElementById('uid').value}`)
+                {
+                    window.alert('You are successfully verifed');
+                }
+                else{
+                    window.alert('Verification Failed');
+                }
             });
         }).catch(function (error) {
             console.log("Error getting documents: ", error);
