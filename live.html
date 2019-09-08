@@ -7,20 +7,63 @@
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 
     <title>Live Ranking</title>
+    <style>
+        body{
+            background:url(a.jpg);
+
+            background-size:cover
+        }
+   .container{
+       background:rgba(0,0,0,0.5);
+       padding:2em;
+       margin-top:10%;
+       padding-right: 0px;
+       color:white;
+    
+   }
+   .form-group{
+       margin-left:10%
+   }
+   button{
+       border-style: none;
+       background:#999;
+       border-radius:0.5em;
+   }
+    </style>
 </head>
 <body>
     <a href="./index.html"><button>Live Ranking</button></a>
-   <center> 
-       <form id="live_form">
-        <label>Name</label>
-        <input type="text" placeholder="Enter your name..." id="name"><br><br>
-        <label>Work</label>
-        <input type="text" placeholder="Type of Work..." id="work"><br><br>
-        <label>Email</label>
-        <input type="text" placeholder="Enter your Email..." id="email"><br><br>
-        <button type="submit">Submit</button><br>
-      </form>
-    </center><br>
+
+    <div class="container">
+        <h2><center>REGISTER</center></h2>
+        <form class="form-horizontal" id="live_form">
+          <div class="form-group" >
+            <label class="control-label col-sm-2" for="name">Name</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="name" placeholder="Enter Name" id="name">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="work">Department</label>
+            <div class="col-sm-10">          
+              <input type="text" class="form-control" id="work" placeholder="Enter Department" id="work">
+            </div>
+          </div>
+              <div class="form-group">
+            <label class="control-label col-sm-2" for="email">Email</label>
+            <div class="col-sm-10">          
+              <input type="email" class="form-control" id="email" placeholder="Enter Email" id="email">
+            </div>
+          </div>
+          <div class="form-group">        
+            <div class="col-sm-offset-2 col-sm-10">
+             <center> <button type="submit" class="btn btn-family" style="background:royalblue" >Submit</button></center>
+            </div>
+          </div>
+        </form>
+      </div>
+      <br>
+
     <table id="show" class="table">
         
     </table>
@@ -30,6 +73,7 @@
     <script>
         document.getElementById('live_form').addEventListener('submit', register);
     </script>
+    <script></script>
     
 </body>
 </html>
