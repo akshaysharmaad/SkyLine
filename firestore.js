@@ -17,9 +17,9 @@ const increment = firebase.firestore.FieldValue.increment(1);
 
 function query(e) {
     e.preventDefault();
-    db.collection("Individual Position").where("Position", "==", `${document.getElementById('qpos').value}`).get().
+    db.collection("Individual Position").get().
         then(function (querySnapshot) {
-            querySnapshot.forEach(function (doc) {
+            querySnapshot.forEach(function(doc) {
                 console.log(doc.data().UID);
             });
         }).catch(function (error) {
