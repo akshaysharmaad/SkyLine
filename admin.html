@@ -6,24 +6,49 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <title>Admin login</title>
+    <!-- awesone fonts css-->
+    <link href="css/font-awesome.css" rel="stylesheet" type="text/css">
+    <!-- owl carousel css-->
+    <link rel="stylesheet" href="owl-carousel/assets/owl.carousel.min.css" type="text/css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
     <style>
-        body{
-            background-image: url(./images/admin.png);
-            background-position: center;
-            background-size: cover;
-            color: white;
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+       
+        table{
+            margin-top:10%;
+            border: 0.1em solid black;
         }
-        .container{
-            margin-top: 10%;
+   th, td{border:0.1em solid black;
+       text-align: center;
+    }
+        body{
+            
+            background-size:cover;
+            background-repeat: no-repeat;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         }
     </style>
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light bg-transparent" id="gtco-main-nav">
+        <div class="container"><a class="navbar-brand" href="./index.html">SkyLine</a>
+    
+            <div id="my-nav" class="collapse navbar-collapse">
+                <form class="form-inline my-2 my-lg-0" style="margin-left:55%;">
+                    <a href="./register.html" class="btn btn-outline-dark my-2 my-sm-0 mr-3 text-uppercase">Register</a>
+                    <a href="./admin.html" class="btn btn-info my-2 my-sm-0 text-uppercase">Bank</a>&nbsp;&nbsp;&nbsp;
+                    <a href="./live_ranking.html" class="btn btn-outline-dark my-2 my-sm-0 mr-3 text-uppercase">Rankings</a>
+    
+                </form>
+            </div>
+        </div>
+    </nav>
     <div class="container">
         <div style="background:rgba(92, 148, 212,0.5);padding: 5%;">
         <center><h2>Admin Login For Bank</h2></center>
-        <form class="form">
+        <form class="form" action="./bank.html">
             <label>Admin Username</label>
             <input type="text" class="form-control"/>
             <label>Password</label>
