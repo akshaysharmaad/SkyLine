@@ -56,10 +56,11 @@ function DisplayQ(){
 
             return text;
         }
+
         // random string length
         var random = randomString(10);
         var d = new Date();
-        var n = d.toLocaleString();
+        var n = d.toTimeString();
         console.log(`${doc.id} => ${doc.data().position}`);
         db.collection("Individual Position").add({
             Name: document.getElementById('name').value,
@@ -80,7 +81,7 @@ function DisplayQ(){
         </tr>
         <tr>
             <td>${doc.data().position}</td>
-            <td>${new Date()}</td>
+            <td>${new Date().toTimeString()}</td>
             <td>${document.getElementById('work').value}</td>
             <td>${document.getElementById('name').value }</td>
             <td>${document.getElementById('email').value }</td>
