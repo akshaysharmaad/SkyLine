@@ -9,12 +9,13 @@
     <title>Live Ranking</title>
     <style>
         body{
-            background:url(a.jpg);
-
-            background-size:cover
+            background:url(./images/bg.svg);
+            background-size:cover;
+            background-repeat: no-repeat;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         }
-   .container{
-       background:rgba(0,0,0,0.5);
+   .register{
+       background:rgba(94, 203, 247, 0.5);
        padding:2em;
        margin-top:10%;
        padding-right: 0px;
@@ -33,10 +34,12 @@
     </style>
 </head>
 <body>
-    <a href="./index.html"><button>Live Ranking</button></a>
+    <!--<a href="./index.html"><button>Live Ranking</button></a>-->
 
     <div class="container">
-        <h2><center>REGISTER</center></h2>
+       
+    <div class="register">
+        <h1 style="text-align: center;">Place yourself in the queue</h1>
         <form class="form-horizontal" id="live_form">
           <div class="form-group" >
             <label class="control-label col-sm-2" for="name">Name</label>
@@ -58,10 +61,16 @@
           </div>
           <div class="form-group">        
             <div class="col-sm-offset-2 col-sm-10">
-             <center> <button type="submit" class="btn btn-family" style="background:royalblue" >Submit</button></center>
+             <center> <button type="submit" class="btn btn-primary" style="background:royalblue" >Submit</button></center>
             </div>
           </div>
         </form>
+      </div>
+
+    <!--<div class="col-sm-4">
+        <img src="./images/mobile.png">
+    </div>-->
+
       </div>
       <br>
 
