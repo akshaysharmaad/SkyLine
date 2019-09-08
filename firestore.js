@@ -17,10 +17,30 @@ const increment = firebase.firestore.FieldValue.increment(1);
 
 function query(e) {
     e.preventDefault();
-    db.collection("Individual Position").where("Position", "==", `${document.getElementById('qpos').value}`).get().
+    find = Number(find)
+    db.collection("Individual Position").where("Position","==",find).get().
         then(function (querySnapshot) {
-            querySnapshot.forEach(function (doc) {
+            querySnapshot.forEach(function(doc) {
+                console.log(find);
+                console.log(doc.data());
+                
                 console.log(doc.data().UID);
+                if (doc.data().UID==`${document.getElementById('uid').value}`)
+                {
+                    window.alert('You are successfully verifed');
+                    doc.ref.delete();
+                   /*  
+                 
+                    db.collection("Individual Position").doc('2jlIKpy4HOP5EFf6yH5R').delete().then(function () {
+                        console.log("Document successfully deleted!");
+                    }).catch(function (error) {
+                        console.error("Error removing document: ", error);
+                    }); */
+                }
+                else{
+                    window.alert('Verification Failed');
+                    document.location.reload(true);
+                }
             });
         }).catch(function (error) {
             console.log("Error getting documents: ", error);
