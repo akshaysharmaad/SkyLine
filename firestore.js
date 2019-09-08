@@ -15,10 +15,6 @@ firebase.initializeApp(firebaseConfig);
 var db = firebase.firestore();
 const increment = firebase.firestore.FieldValue.increment(1);
 
-document.addEventListener('submit', query);
-
-document.addEventListener('submit',register);
-
 function query(e) {
     e.preventDefault();
     db.collection("Individual Position").where("Position", "==", `${document.getElementById('qpos').value}`).get().
