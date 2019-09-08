@@ -17,11 +17,11 @@ const increment = firebase.firestore.FieldValue.increment(1);
 
 function query(e) {
     e.preventDefault();
-    find = Number(find)
+    find = Number(find);    
     db.collection("Individual Position").where("Position","==",find).get().
         then(function (querySnapshot) {
             querySnapshot.forEach(function(doc) {
-                console.log(find);
+                
                 console.log(doc.data());
                 
                 console.log(doc.data().UID);
