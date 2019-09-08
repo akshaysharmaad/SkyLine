@@ -5,9 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>SkyLine</title>
+    <style>
+        body{
+            background:url(bg.svg);
+            background-repeat:no-repeat;
+            background-size:cover;
+            background-position:center
+        }
+        table{
+            margin-top:10%
+        }
+   th, td{border:0.1em solid black;
+       text-align: center
+
+    }
+    ul{
+        display:inline-flex;
+        list-style: none;
+            }
+    li{
+        margin:1em;
+
+
+    }
+    button{
+        background:white;
+    }
+    </style>
 </head>
 <body>
+    <nav>
+        <ul>
+        <li><a href="bank.html"><button><i class="fa fa-university fa-3x" aria-hidden="true"></i></button></a>
+            </li>
+
+        <li><a href="live.html"><button><i class="fa fa-user-plus fa-3x" aria-hidden="true"></i></button></a>
+        </li>
+        
+         </ul>
+    </nav>
+    <div><h2><center>LIVE RANKING</center></h2></div>
     <table id="live_details" class="table">
 <th>Position</th><th>Name</th><th>Time</th><th>Email</th>
     </table>
